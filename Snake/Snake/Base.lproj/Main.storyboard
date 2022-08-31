@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="stM-Gw-9mX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="w8d-Uv-7Z8">
+            <objects>
+                <viewController id="stM-Gw-9mX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j1o-l5-hPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="2yh-IS-drk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8To-yh-f69">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn2-vU-MkT">
+                                <rect key="frame" x="161" y="432.5" width="92" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xn2-vU-MkT" secondAttribute="height" multiplier="225:76" id="qDL-3W-DpS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="PLAY"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" id="hmC-SH-lYb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-oO-8be">
+                                <rect key="frame" x="161" y="494" width="92" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SCORE"/>
+                                <connections>
+                                    <segue destination="x8v-6x-En0" kind="showDetail" id="Nd4-88-8Lt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xn2-vU-MkT" firstAttribute="centerY" secondItem="8To-yh-f69" secondAttribute="centerY" id="BRI-qa-OG1"/>
+                            <constraint firstItem="gNQ-oO-8be" firstAttribute="height" secondItem="Xn2-vU-MkT" secondAttribute="height" id="PnS-Xm-zTL"/>
+                            <constraint firstItem="gNQ-oO-8be" firstAttribute="width" secondItem="Xn2-vU-MkT" secondAttribute="width" id="TxT-ob-p5o"/>
+                            <constraint firstItem="gNQ-oO-8be" firstAttribute="top" secondItem="Xn2-vU-MkT" secondAttribute="bottom" constant="30.5" id="Vrr-yH-my9"/>
+                            <constraint firstItem="Xn2-vU-MkT" firstAttribute="centerX" secondItem="8To-yh-f69" secondAttribute="centerX" id="XsI-o8-QL7"/>
+                            <constraint firstItem="gNQ-oO-8be" firstAttribute="centerX" secondItem="Xn2-vU-MkT" secondAttribute="centerX" id="z4V-jh-sox"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxg-PF-nLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788.40579710144937" y="123.88392857142857"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Snake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="124"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="Aau-zL-Wct">
+            <objects>
+                <viewController id="x8v-6x-En0" customClass="ScoreViewController" customModule="Snake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vkE-WX-TWX"/>
+                        <viewControllerLayoutGuide type="bottom" id="c2x-82-JHh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aTd-13-5YK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDb-BE-Kgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.34782608695656" y="806.91964285714278"/>
+        </scene>
+    </scenes>
+</document>
